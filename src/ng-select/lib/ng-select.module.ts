@@ -16,7 +16,7 @@ import {
     NgTagTemplateDirective,
 	NgTypeToSearchTemplateDirective,
 	NgPlaceholderTemplateDirective,
-} from './ng-templates.directive';
+} from './ng-templates-directives';
 
 @NgModule({
 	imports: [
