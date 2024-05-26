@@ -44,7 +44,7 @@ import {
     NgTagTemplateDirective,
     NgLoadingSpinnerTemplateDirective,
     NgItemLabelDirective,
-} from './ng-templates.directive';
+} from './ng-templates-directives';
 
 import { ConsoleService } from './console.service';
 import { isDefined, isFunction, isPromise, isObject } from './value-utils';
