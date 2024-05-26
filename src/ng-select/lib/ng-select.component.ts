@@ -41,7 +41,8 @@ import {
     NgLoadingTextTemplateDirective,
     NgMultiLabelTemplateDirective,
     NgTagTemplateDirective,
-    NgLoadingSpinnerTemplateDirective
+    NgLoadingSpinnerTemplateDirective,
+    NgItemLabelDirective,
 } from './ng-templates.directive';
 
 import { ConsoleService } from './console.service';
@@ -54,6 +55,7 @@ import { NgOptionComponent } from './ng-option.component';
 import { SelectionModelFactory } from './selection-model';
 import { NgSelectConfig } from './config.service';
 import { NgDropdownPanelService } from './ng-dropdown-panel.service';
+import {NgClass, NgTemplateOutlet} from "@angular/common";
 
 export const SELECTION_MODEL_FACTORY = new InjectionToken<SelectionModelFactory>('ng-select-selection-model');
 export type AddTagFn = ((term: string) => any | Promise<any>);
@@ -62,6 +64,7 @@ export type GroupValueFn = (key: string | any, children: any[]) => string | any;
 
 @Component({
     selector: 'ng-select',
+    standalone: true,
     templateUrl: './ng-select.component.html',
     styleUrls: ['./ng-select.component.scss'],
     providers: [{
@@ -71,7 +74,13 @@ export type GroupValueFn = (key: string | any, children: any[]) => string | any;
     }, NgDropdownPanelService],
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    })
+    imports: [
+        NgTemplateOutlet,
+        NgItemLabelDirective,
+        NgDropdownPanelComponent,
+        NgClass,
+    ],
+})
 export class NgSelectComponent implements OnDestroy, OnChanges, OnInit, AfterViewInit, ControlValueAccessor {
 
     @Input() bindLabel: string;
