@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Person, DataService } from '../data.service';
 import { Observable } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
-  selector: 'app-search-editable-example',
-  templateUrl: './search-editable-example.component.html',
-  styleUrls: ['./search-editable-example.component.scss']
+    selector: 'app-search-editable-example',
+    templateUrl: './search-editable-example.component.html',
+    styleUrls: ['./search-editable-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, AsyncPipe]
 })
 export class SearchEditableExampleComponent implements OnInit {
 

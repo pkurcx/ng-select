@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService, Person } from '../data.service';
+import { NgOptionTemplateDirective } from '@ng-select/ng-select';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'search-custom-example',
     templateUrl: './search-custom-example.component.html',
-    styleUrls: ['./search-custom-example.component.scss']
+    styleUrls: ['./search-custom-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, NgOptionTemplateDirective]
 })
 export class SearchCustomExampleComponent implements OnInit {
 

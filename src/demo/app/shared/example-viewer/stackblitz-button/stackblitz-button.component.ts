@@ -10,7 +10,8 @@ import { StackblitzService } from './stackblitz.service';
             height: 18px;
             vertical-align: sub;
         }
-    `]
+    `],
+    standalone: true
 })
 export class StackblitzButtonComponent {
 

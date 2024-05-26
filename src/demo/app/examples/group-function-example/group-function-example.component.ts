@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { NgOptgroupTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'group-function-example',
     templateUrl: './group-function-example.component.html',
-    styleUrls: ['./group-function-example.component.scss']
+    styleUrls: ['./group-function-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgOptgroupTemplateDirective, JsonPipe]
 })
 export class GroupFunctionExampleComponent implements OnInit {
 

@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataService } from '../data.service';
+import { AsyncPipe, SlicePipe } from '@angular/common';
+import { NgSelectComponent, NgMultiLabelTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'multi-select-custom-example',
     templateUrl: './multi-select-custom-example.component.html',
-    styleUrls: ['./multi-select-custom-example.component.scss']
+    styleUrls: ['./multi-select-custom-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgMultiLabelTemplateDirective, AsyncPipe, SlicePipe]
 })
 export class MultiSelectCustomExampleComponent implements OnInit {
 

@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { NgOptionHighlightDirective } from '@ng-select/ng-option-highlight';
+import { NgLabelTemplateDirective, NgOptgroupTemplateDirective, NgOptionTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'template-optgroup-example',
     templateUrl: './template-optgroup-example.component.html',
-    styleUrls: ['./template-optgroup-example.component.scss']
+    styleUrls: ['./template-optgroup-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgLabelTemplateDirective, NgOptgroupTemplateDirective, NgOptionTemplateDirective, NgOptionHighlightDirective]
 })
 export class TemplateOptgroupExampleComponent implements OnInit {
 

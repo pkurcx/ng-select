@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgOptionComponent } from '@ng-select/ng-select';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'forms-with-options-example',
     templateUrl: './forms-with-options-example.component.html',
-    styleUrls: ['./forms-with-options-example.component.scss']
+    styleUrls: ['./forms-with-options-example.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgSelectComponent, NgOptionComponent]
 })
 export class FormsWithOptionsExampleComponent implements OnInit {
 

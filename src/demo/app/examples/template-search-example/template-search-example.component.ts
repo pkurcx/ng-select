@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { NgHeaderTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'template-search-example',
     templateUrl: './template-search-example.component.html',
-    styleUrls: ['./template-search-example.component.scss']
+    styleUrls: ['./template-search-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgHeaderTemplateDirective]
 })
 export class TemplateSearchExampleComponent implements OnInit {
 

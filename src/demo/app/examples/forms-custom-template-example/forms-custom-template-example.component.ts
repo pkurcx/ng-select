@@ -1,12 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataService } from '../data.service';
+import { NgOptionHighlightDirective } from '@ng-select/ng-option-highlight';
+import { NgLabelTemplateDirective, NgOptionTemplateDirective } from '@ng-select/ng-select';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'forms-custom-template-example',
     templateUrl: './forms-custom-template-example.component.html',
-    styleUrls: ['./forms-custom-template-example.component.scss']
+    styleUrls: ['./forms-custom-template-example.component.scss'],
+    standalone: true,
+    imports: [
+        FormsModule, 
+        ReactiveFormsModule, 
+        NgSelectComponent, 
+        NgLabelTemplateDirective, 
+        NgOptionTemplateDirective, 
+        NgOptionHighlightDirective,
+    ]
 })
 export class FormsCustomTemplateExampleComponent implements OnInit {
 

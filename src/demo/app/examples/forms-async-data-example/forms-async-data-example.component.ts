@@ -1,13 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectComponent } from '@ng-select/ng-select'
 import { delay } from 'rxjs/operators';
 import { DataService } from '../data.service';
+import { NgOptionHighlightDirective } from '@ng-select/ng-option-highlight';
+import { NgOptionTemplateDirective } from '@ng-select/ng-select';
 
 @Component({
     selector: 'forms-async-data-example',
     templateUrl: './forms-async-data-example.component.html',
-    styleUrls: ['./forms-async-data-example.component.scss']
+    styleUrls: ['./forms-async-data-example.component.scss'],
+    standalone: true,
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        NgSelectComponent,
+        NgOptionTemplateDirective,
+        NgOptionHighlightDirective,
+    ]
 })
 export class FormsAsyncDataExampleComponent implements OnInit {
 

@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { NgLoadingSpinnerTemplateDirective } from '@ng-select/ng-select';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'template-loading-example',
     templateUrl: './template-loading-example.component.html',
-    styleUrls: ['./template-loading-example.component.scss']
+    styleUrls: ['./template-loading-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, NgLoadingSpinnerTemplateDirective]
 })
 export class TemplateLoadingExampleComponent implements OnInit {
 

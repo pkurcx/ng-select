@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgHeaderTemplateDirective, NgOptionTemplateDirective } from '@ng-select/ng-select';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'virtual-scroll-example',
     templateUrl: './virtual-scroll-example.component.html',
-    styleUrls: ['./virtual-scroll-example.component.scss']
+    styleUrls: ['./virtual-scroll-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, NgHeaderTemplateDirective, NgOptionTemplateDirective]
 })
 export class VirtualScrollExampleComponent implements OnInit {
 

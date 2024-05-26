@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { NgOptionComponent, NgSelectComponent } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'data-source-options-example',
     templateUrl: './data-source-options-example.component.html',
-    styleUrls: ['./data-source-options-example.component.scss']
+    styleUrls: ['./data-source-options-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgOptionComponent, JsonPipe]
 })
 export class DataSourceOptionsExampleComponent implements OnInit {
 

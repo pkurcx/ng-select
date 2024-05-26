@@ -1,10 +1,19 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DataService } from '../data.service';
+import { AsyncPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'append-to-example',
     templateUrl: './append-to-example.component.html',
     styleUrls: ['./append-to-example.component.scss'],
+    standalone: true,
+    imports: [
+        NgSelectComponent,
+        FormsModule,
+        AsyncPipe,
+    ],
 //     encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class AppendToExampleComponent implements OnInit {

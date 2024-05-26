@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'bindings-nested-example',
     templateUrl: './bindings-nested-example.component.html',
-    styleUrls: ['./bindings-nested-example.component.scss']
+    styleUrls: ['./bindings-nested-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule]
 })
 export class BindingsNestedExampleComponent implements OnInit {
 
