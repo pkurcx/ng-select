@@ -12,8 +12,8 @@ import {
 import { Subject } from 'rxjs';
 
 @Component({
-	selector: 'ng-option',
-	standalone: true,
+    selector: 'ng-option',
+    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     template: `<ng-content/>`,
 })

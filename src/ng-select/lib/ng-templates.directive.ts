@@ -18,6 +18,7 @@ export class NgItemLabelDirective implements OnChanges {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-option-tmp]',
     standalone: true,
 })
@@ -27,6 +28,7 @@ export class NgOptionTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-optgroup-tmp]',
     standalone: true,
 })
@@ -36,6 +38,7 @@ export class NgOptgroupTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-label-tmp]',
     standalone: true,
 })
@@ -45,6 +48,7 @@ export class NgLabelTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-multi-label-tmp]',
     standalone: true,
 })
@@ -54,6 +58,7 @@ export class NgMultiLabelTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-header-tmp]',
     standalone: true,
 })
@@ -63,6 +68,7 @@ export class NgHeaderTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-footer-tmp]',
     standalone: true,
 })
@@ -72,6 +78,7 @@ export class NgFooterTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-notfound-tmp]',
     standalone: true,
 })
@@ -90,6 +97,7 @@ export class NgPlaceholderTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-typetosearch-tmp]',
     standalone: true,
 })
@@ -99,6 +107,7 @@ export class NgTypeToSearchTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-loadingtext-tmp]',
     standalone: true,
 })
@@ -108,6 +117,7 @@ export class NgLoadingTextTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-tag-tmp]',
     standalone: true,
 })
@@ -117,6 +127,7 @@ export class NgTagTemplateDirective {
 
 @Directive({
     // eslint-disable-next-line @angular-eslint/directive-selector
+
     selector: '[ng-loadingspinner-tmp]',
     standalone: true,
 })
