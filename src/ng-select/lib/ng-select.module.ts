@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { NgDropdownPanelComponent } from './ng-dropdown-panel.component';
 import { NgOptionComponent } from './ng-option.component';
-import { NgSelectComponent, SELECTION_MODEL_FACTORY } from './ng-select.component';
+import { NgSelectComponent } from './ng-select.component';
 import {
     NgFooterTemplateDirective,
     NgHeaderTemplateDirective,
@@ -16,7 +16,6 @@ import {
     NgTagTemplateDirective,
     NgTypeToSearchTemplateDirective
 } from './ng-templates.directive';
-import {DefaultSelectionModelFactory} from './selection-model';
 
 @NgModule({
     imports: [
@@ -51,8 +50,5 @@ import {DefaultSelectionModelFactory} from './selection-model';
     NgTagTemplateDirective,
     NgLoadingSpinnerTemplateDirective
     ],
-    providers: [
-    { provide: SELECTION_MODEL_FACTORY, useValue: DefaultSelectionModelFactory }
-    ]
     })
 export class NgSelectModule {}
