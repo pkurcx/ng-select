@@ -15,7 +15,7 @@ import {
     NgOptionTemplateDirective,
     NgTagTemplateDirective,
     NgTypeToSearchTemplateDirective
-} from './ng-templates.directive';
+} from './ng-templates-directives';
 
 @NgModule({
     imports: [
