@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { NgOptionHighlightDirective } from '@ng-select/ng-option-highlight';
+import { NgOptionTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'template-option-example',
     templateUrl: './template-option-example.component.html',
-    styleUrls: ['./template-option-example.component.scss']
+    styleUrls: ['./template-option-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgOptionTemplateDirective, NgOptionHighlightDirective]
 })
 export class TemplateOptionExampleComponent implements OnInit {
 

@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { NgOptgroupTemplateDirective, NgOptionTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'group-children-example',
     templateUrl: './group-children-example.component.html',
-    styleUrls: ['./group-children-example.component.scss']
+    styleUrls: ['./group-children-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgOptgroupTemplateDirective, NgOptionTemplateDirective, JsonPipe]
 })
 export class GroupChildrenExampleComponent implements OnInit {
 

@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService, Person } from '../data.service';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'data-source-array-example',
     templateUrl: './data-source-array-example.component.html',
-    styleUrls: ['./data-source-array-example.component.scss']
+    styleUrls: ['./data-source-array-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule]
 })
 export class DataSourceArrayExampleComponent implements OnInit {
 

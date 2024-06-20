@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { JsonPipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 interface Event {
     name: string;
@@ -9,7 +12,9 @@ interface Event {
 @Component({
     selector: 'output-events-example',
     templateUrl: './output-events-example.component.html',
-    styleUrls: ['./output-events-example.component.scss']
+    styleUrls: ['./output-events-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, JsonPipe]
 })
 export class OutputEventsExampleComponent implements OnInit {
 

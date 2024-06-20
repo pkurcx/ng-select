@@ -1,8 +1,10 @@
 import { Component, ComponentFactoryResolver, Directive, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { EXAMPLE_COMPONENTS } from '../../examples/examples';
+import { StackblitzButtonComponent } from './stackblitz-button/stackblitz-button.component';
 
 @Directive({
     selector: '[example-host]',
+    standalone: true,
 })
 export class ExampleHostDirective {
     constructor(public viewContainerRef: ViewContainerRef) {
@@ -28,7 +30,9 @@ export class ExampleHostDirective {
         .card {
             margin-bottom: 20px;
         }
-    `]
+    `],
+    standalone: true,
+    imports: [StackblitzButtonComponent, ExampleHostDirective]
 })
 export class ExampleViewerComponent implements OnInit {
 

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'forms-single-select-example',
     templateUrl: './forms-single-select-example.component.html',
-    styleUrls: ['./forms-single-select-example.component.scss']
+    styleUrls: ['./forms-single-select-example.component.scss'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule, NgSelectComponent]
 })
 export class FormsSingleSelectExampleComponent implements OnInit {
 

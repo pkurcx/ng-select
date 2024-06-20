@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { NgOptgroupTemplateDirective } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { NgSelectComponent } from '@ng-select/ng-select';
 
 @Component({
     selector: 'group-selectable-hidden-example',
     templateUrl: './group-selectable-hidden-example.component.html',
-    styleUrls: ['./group-selectable-hidden-example.component.scss']
+    styleUrls: ['./group-selectable-hidden-example.component.scss'],
+    standalone: true,
+    imports: [NgSelectComponent, FormsModule, NgOptgroupTemplateDirective, JsonPipe]
 })
 export class GroupSelectableHiddenExampleComponent implements OnInit {
 
