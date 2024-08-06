@@ -31,10 +31,10 @@ const CSS_POSITIONS: Readonly<string[]> = ['top', 'right', 'bottom', 'left'];
 const SCROLL_SCHEDULER = typeof requestAnimationFrame !== 'undefined' ? animationFrameScheduler : asapScheduler;
 
 @Component({
-	changeDetection: ChangeDetectionStrategy.OnPush,
-	encapsulation: ViewEncapsulation.None,
-	selector: 'ng-dropdown-panel',
-	standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    selector: 'ng-dropdown-panel',
+    standalone: true,
     template: `
         @if (headerTemplate) {
           <div class="ng-dropdown-header">

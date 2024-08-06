@@ -45,7 +45,7 @@ import {
     NgLoadingSpinnerTemplateDirective,
     NgPlaceholderTemplateDirective,
     NgItemLabelDirective,
-} from './ng-templates.directive';
+} from './ng-templates-directives';
 
 import { ConsoleService } from './console.service';
 import { isDefined, isFunction, isPromise, isObject } from './value-utils';
@@ -65,8 +65,8 @@ export type CompareWithFn = (a: any, b: any) => boolean;
 export type GroupValueFn = (key: string | any, children: any[]) => string | any;
 
 @Component({
-	selector: 'ng-select',
-	standalone: true,
+    selector: 'ng-select',
+    standalone: true,
     templateUrl: './ng-select.component.html',
     styleUrls: ['./ng-select.component.scss'],
     providers: [
