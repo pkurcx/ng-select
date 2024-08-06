@@ -10,3 +10,4 @@ export {NgHeaderTemplateDirective} from "./ng-header-template.directive";
 export {NgLabelTemplateDirective} from "./ng-label-template.directive";
 export {NgLoadingTextTemplateDirective} from "./ng-loading-text-template.directive";
 export {NgOptgroupTemplateDirective} from "./ng-optgroup-template.directive";
+export {NgPlaceholderTemplateDirective} from "./ng-placeholder-template.directive";
